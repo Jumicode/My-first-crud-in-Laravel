@@ -1,5 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NoteController;
 
-Route::get('/product/{id}', [Controller::class, 'function'])->name('example');
+Route::get('/note',[NoteController::class, 'index'])->name('note.index');
