@@ -17,6 +17,11 @@ return view('note.index', compact('notes'));
 
 }
 
+public function create()
+{
+    return view('note.create');
+}
+
 
 
 }
