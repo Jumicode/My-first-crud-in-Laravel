@@ -23,5 +23,14 @@ public function create()
 }
 
 
+public function store(Request $request)
+{
+
+Note::create($request->all());
+return redirect()->route('note.index');
+}
+
+
+
 
 }
