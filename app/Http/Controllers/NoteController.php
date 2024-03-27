@@ -22,7 +22,7 @@ public function create()
 public function store(NoteRequest $request)
 {
 Note::create($request->all());
-return redirect()->route('note.index');
+return redirect()->route('note.index')->with('success','Note create');
 }
 
 public function edit(Note $note)
@@ -34,7 +34,7 @@ public function edit(Note $note)
 public function update(NoteRequest $request, Note $note)
 {
 $note->update($request->all());
-return redirect()->route('note.index');
+return redirect()->route('note.index')->with('success','Note Update');
 }
 
 public function show(Note $note)
@@ -45,6 +45,6 @@ public function show(Note $note)
 public function destroy (Note $note)
 {
     $note->delete();
-    return redirect()->route('note.index');
+    return redirect()->route('note.index')->with('danger','Note delete');
 }
 }
