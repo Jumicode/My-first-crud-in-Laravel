@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Note;
-use App\Http\Request\NoteRequest;
+use App\Http\Requests\NoteRequest;
 class NoteController extends Controller
 {
 

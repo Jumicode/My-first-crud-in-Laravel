@@ -8,10 +8,19 @@
 @csrf
 
 <label>Title</label>
-<input type="text" name="title" value="{{$note->title}}">
+<input type="text" name="title" value="{{$note->title}}"> <br/>
+@error('title')
+
+<p style="color: red">{{ $message }}</p>
+@enderror
+
 
 <label>Description</label>
-<input type="text" name="description" value="{{$note->description}}">
+<input type="text" name="description" value="{{$note->description}}"> <br/>
+@error('description')
+<p style="color: red">{{ $message }}</p>
+@enderror
+
 
 <input type="submit" value="Update">
 </form>
