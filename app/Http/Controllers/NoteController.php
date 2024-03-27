@@ -43,7 +43,10 @@ $note->update($request->all());
 return redirect()->route('note.index');
 
 }
-
+public function show(Note $note)
+{
+    return view('note.show',compact('note'));
+}
 
 
 
